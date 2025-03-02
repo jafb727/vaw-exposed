@@ -16,6 +16,9 @@ A modern web application built with **React**, **TypeScript**, and **Vite**. Thi
 -  **🧩 State Management**: React Query & Zustand
 -  **📦 Component Documentation**: Storybook integration
 -  **🧪 Testing**: Jest, React Testing Library, Cypress for end-to-end tests
+-  **📂 Monorepo Support**: Turborepo setup for scalable development
+-  **🔐 Security Best Practices**: Helmet for HTTP security headers, environment variable management
+-  **📊 Analytics & Monitoring**: Google Analytics, Sentry integration
 
 ---
 
@@ -27,7 +30,6 @@ git clone https://github.com/jafb727/vaw-exposed.git
 cd vaw-exposed
 
 # Install dependencies
-# Recommended
 pnpm install
 # or
 yarn install
@@ -70,7 +72,37 @@ The app will be available at `http://localhost:3000/`
 ├── public/              # Public static files
 ├── .storybook/          # Storybook configuration
 ├── tests/               # Integration and end-to-end tests
-└── vite.config.ts       # Vite configuration
+├── scripts/             # Custom automation scripts
+└── vite.config.ts        # Vite configuration
+```
+
+---
+
+## 🏗 Build & Deployment
+
+To build the project:
+
+```sh
+# Build app
+pnpm run build
+# or
+yarn build
+# or
+npm run build
+```
+
+For production deployment, configure a CI/CD pipeline with GitHub Actions, Vercel, Netlify, or Docker.
+
+Example Docker setup:
+
+```sh
+FROM node:18-alpine
+WORKDIR /app
+COPY package.json pnpm-lock ./
+RUN pnpm install --frozen-lockfile
+COPY . .
+RUN pnpm build
+CMD ["pnpm", "preview"]
 ```
 
 ---
@@ -114,6 +146,29 @@ module.exports = {
       },
    },
 };
+```
+
+---
+
+## 🔐 Security Best Practices
+
+-  Environment Variables: Use .env files and dotenv package.
+-  Helmet: Adds security headers.
+-  CORS Handling: Configurable via middleware.
+
+---
+
+## 📊 Analytics & Monitoring
+
+-  Google Analytics integration for usage tracking.
+-  Sentry for error tracking and monitoring.
+
+Example setup:
+
+```tsx
+import * as Sentry from "@sentry/react";
+
+Sentry.init({ dsn: process.env.SENTRY_DSN });
 ```
 
 ---
@@ -168,7 +223,7 @@ Storybook is used for documenting UI components.
 Run Storybook:
 
 ```sh
-yarn storybook
+pnpm run storybook
 ```
 
 Example Story:
@@ -196,7 +251,7 @@ The project uses Jest, React Testing Library, and Cypress.
 Run tests:
 
 ```sh
-yarn test
+`pnpm` test
 ```
 
 Example test:

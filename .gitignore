@@ -1,0 +1,103 @@
+### Node.js / JavaScript / TypeScript
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+### Vite / Webpack / Parcel / Next.js / Nuxt.js / Remix / Astro
+/.next/
+/.nuxt/
+/.remix/
+/.astro/
+/.svelte-kit/
+/.parcel-cache/
+/.vercel/
+/.netlify/
+/build/
+/dist/
+/out/
+/.turbo/
+
+### Environment variables & secrets
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+### Logs & Debugging
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+debug.log*
+
+### Editor / IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+### TypeScript
+*.tsbuildinfo
+
+### Linting & Formatting
+.eslintcache
+.prettier-cache
+
+### Testing & Coverage
+/coverage/
+/jest.cache/
+/jest.config.js
+/.nyc_output/
+
+### Storybook
+.storybook-out/
+
+### Docker & CI/CD
+/.dockerignore
+/docker-compose.override.yml
+/cypress/videos/
+/cypress/screenshots/
+/.github/workflows/*.log
+
+### Firebase / AWS / Google Cloud / Azure
+.firebase/
+.firebaserc
+.gcloud/
+.aws/
+.azure/
+
+### MacOS/Linux-specific files
+*.swp
+*.swo
+*.orig
+*~
+
+### Miscellaneous
+npm-debug.log*
+yarn-error.log*
+/.nvmrc
+/.node-version
+/.idea/
+/.vscode/
+/.history/
+/.husky/_/
+/.husky/*.lock
+
+# Avoid tracking local dependencies in monorepos
+.pnpm-store/
+.turbo/
+
+# Next.js specific
+.next/
+.vercel/
