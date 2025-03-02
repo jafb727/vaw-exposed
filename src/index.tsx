@@ -16,8 +16,8 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 
 /** -------------------------------------------------------- */
-
 /** Mounting React App into unique HTMLElement */
+
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const appContainer = document.getElementById("root")!;
 const root = createRoot(appContainer);

@@ -23,7 +23,7 @@ describe("App", () => {
       expect(component).not.toBe(null);
    });
 
-   it("Renders main component", () => {
+   it("Renders main component wrapper", () => {
       /** Component context mounting */
       const { getByTestId } = renderComponent(<App />);
 

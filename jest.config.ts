@@ -20,6 +20,17 @@ const config: Config = {
    automock: false,
    bail: 1,
    clearMocks: true,
+   collectCoverage: true,
+   collectCoverageFrom: [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/index.tsx",
+      "!src/serviceWorker.ts",
+   ],
+   coverageDirectory: "coverage",
+   coveragePathIgnorePatterns: ["/node_modules/"],
+   coverageProvider: "babel",
+   coverageReporters: ["json", "text", "lcov", "clover"],
    moduleDirectories: ["node_modules", "src"],
    moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json"],
    moduleNameMapper: {
