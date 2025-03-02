@@ -34,7 +34,9 @@ exports[`App Matches snapshot 1`] = `
   <div
     class="card"
   >
-    <button>
+    <button
+      data-testid="counter"
+    >
       count is 
       0
     </button>

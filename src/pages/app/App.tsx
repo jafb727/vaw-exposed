@@ -31,7 +31,7 @@ import "./app.css";
  */
 const App = (): JSX.Element => {
    /** State */
-   const [count, setCount] = useState(0);
+   const [count, setCount] = useState<number>(0);
 
    /** ------------------------------ */
 
@@ -41,7 +41,7 @@ const App = (): JSX.Element => {
     * @returns {void}
     */
    const countClicks = (): void => {
-      setCount((count) => {
+      setCount((count: number): number => {
          return count + 1;
       });
    };
@@ -67,7 +67,9 @@ const App = (): JSX.Element => {
          </div>
          <h1>Vite + React</h1>
          <div className="card">
-            <button onClick={countClicks}>count is {count}</button>
+            <button data-testid="counter" onClick={countClicks}>
+               count is {count}
+            </button>
             <p>
                Edit <code>src/App.tsx</code> and save to test HMR
             </p>
