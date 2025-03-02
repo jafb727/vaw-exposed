@@ -13,6 +13,9 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
+/** @import Utilities */
+import { ReactElement } from "react";
+
 /** @import Stylesheets */
 import "./app.css";
 
@@ -21,9 +24,9 @@ import "./app.css";
 /**
  * @name App
  * @description Main application component
- * @returns {JSX | null}
+ * @returns {ReactElement}
  */
-function App() {
+function App(): ReactElement {
    /** State */
    const [count, setCount] = useState(0);
 

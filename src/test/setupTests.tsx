@@ -8,6 +8,7 @@
 
 /** @import Utilities */
 import { render } from "@testing-library/react";
+import { ComponentType } from "react";
 
 /** -------------------------------------------------------- */
 
@@ -17,6 +18,6 @@ import { render } from "@testing-library/react";
  * @param {JSX.Element} Component - component to render
  * @returns {RenderResult}
  */
-export function renderComponent(Component: JSX.Element) {
+export function renderComponent(Component: ComponentType) {
    return render(<Component />);
 }
