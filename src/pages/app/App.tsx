@@ -32,6 +32,19 @@ function App(): ReactElement {
 
    /** ------------------------------ */
 
+   /**
+    * @name countClicks
+    * @description Increments counter according to user clicks
+    * @returns {void}
+    */
+   const countClicks = (): void => {
+      setCount((count) => {
+         return count + 1;
+      });
+   };
+
+   /** ------------------------------ */
+
    return (
       <>
          <div>
@@ -44,9 +57,7 @@ function App(): ReactElement {
          </div>
          <h1>Vite + React</h1>
          <div className="card">
-            <button onClick={() => setCount((count) => count + 1)}>
-               count is {count}
-            </button>
+            <button onClick={countClicks}>count is {count}</button>
             <p>
                Edit <code>src/App.tsx</code> and save to test HMR
             </p>
