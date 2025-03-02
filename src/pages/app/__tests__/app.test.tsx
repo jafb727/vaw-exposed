@@ -10,3 +10,11 @@
 import App from "..";
 
 /** -------------------------------------------------------- */
+
+describe("App", () => {
+   it("Renders ok", () => {});
+
+   it("Renders main component", () => {});
+
+   it("Matches snapshot", () => {});
+});
