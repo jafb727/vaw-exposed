@@ -7,10 +7,10 @@
 /** -------------------------------------------------------- */
 
 /**
- * @type containerProps
+ * @type wrapperProps
  * @description Basic properties for any component JSX wrapper
  */
-export type containerProps = {
+export type wrapperProps = {
    id?: string;
    className?: string;
    "data-testid": string;

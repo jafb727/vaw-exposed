@@ -13,7 +13,7 @@ import { useState } from "react";
 import { JSX } from "react";
 
 /** @import Types */
-import { containerProps } from "../../types";
+import { wrapperProps } from "../../types";
 
 /** @import Assets */
 import reactLogo from "../../assets/images/react.svg";
@@ -49,7 +49,7 @@ const App = (): JSX.Element => {
    /** ------------------------------ */
 
    /** Main component wrapper properties */
-   const properties: containerProps = {
+   const properties: wrapperProps = {
       "data-testid": "app-page",
    };
 
