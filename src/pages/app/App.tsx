@@ -10,8 +10,8 @@
 import { useState } from "react";
 
 /** @import Assets */
-import reactLogo from "./assets/images/react.svg";
-import viteLogo from "./assets/images/vite.svg";
+import reactLogo from "./../../assets/images/react.svg";
+import viteLogo from "./../../assets/images/vite.svg";
 
 /** @import Utilities */
 import { ReactElement } from "react";
