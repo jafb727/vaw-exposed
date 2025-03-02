@@ -35,7 +35,7 @@ const config: Config = {
    moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json"],
    moduleNameMapper: {
       ".(css|less|scss|sass)$": "identity-obj-proxy",
-      ".(gif|ttf|eot|svg|png)$": "<rootDir>/src/test/__mocks__/fileMock.ts",
+      ".(gif|ttf|eot|svg|png)$": "<rootDir>/src/test/__mocks__/fileMock.js",
    },
    setupFilesAfterEnv: ["<rootDir>/src/test/setupTests.tsx"],
    testEnvironment: "node",
