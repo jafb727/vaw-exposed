@@ -10,11 +10,11 @@
 import { useState } from "react";
 
 /** @import Utilities */
-import { ReactElement } from "react";
+import { JSX } from "react";
 
 /** @import Assets */
-import reactLogo from "./../../assets/images/react.svg";
-import viteLogo from "./../../assets/images/vite.svg";
+import reactLogo from "../../assets/images/react.svg";
+import viteLogo from "../../assets/images/vite.svg";
 
 /** @import Stylesheets */
 import "./app.css";
@@ -24,9 +24,9 @@ import "./app.css";
 /**
  * @name App
  * @description Main application component
- * @returns {ReactElement}
+ * @returns {JSX.Element}
  */
-function App(): ReactElement {
+const App = (): JSX.Element => {
    /** State */
    const [count, setCount] = useState(0);
 
@@ -45,8 +45,14 @@ function App(): ReactElement {
 
    /** ------------------------------ */
 
+   const properties = {
+      "data-testid": "app-page",
+   };
+
+   /** ------------------------------ */
+
    return (
-      <>
+      <div {...properties}>
          <div>
             <a href="https://vite.dev" target="_blank" rel="noreferrer">
                <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -65,9 +71,9 @@ function App(): ReactElement {
          <p className="read-the-docs">
             Click on the Vite and React logos to learn more
          </p>
-      </>
+      </div>
    );
-}
+};
 /** -------------------------------------------------------- */
 
 /** @exports @default Component */

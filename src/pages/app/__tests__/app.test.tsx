@@ -17,7 +17,7 @@ import { renderComponent } from "../../../test/setupTests";
 describe("App", () => {
    it("Renders ok", () => {
       /** Component context mounting */
-      const component = renderComponent(App);
+      const component = renderComponent(<App />);
 
       /** Main assertion */
       expect(component).not.toBe(null);
@@ -25,7 +25,7 @@ describe("App", () => {
 
    it("Renders main component", () => {
       /** Component context mounting */
-      const { getByTestId } = renderComponent(App);
+      const { getByTestId } = renderComponent(<App />);
 
       /** Main assertion */
       const component = getByTestId("app-page");
@@ -34,7 +34,7 @@ describe("App", () => {
 
    it("Matches snapshot", () => {
       /** Component context mounting */
-      const { getByTestId } = renderComponent(App);
+      const { getByTestId } = renderComponent(<App />);
 
       /** Main assertion */
       const component = getByTestId("app-page");

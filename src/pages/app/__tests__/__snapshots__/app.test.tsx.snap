@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Matches snapshot 1`] = `
+<div
+  data-testid="app-page"
+>
+  <div>
+    <a
+      href="https://vite.dev"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Vite logo"
+        class="logo"
+        src="mock-svg"
+      />
+    </a>
+    <a
+      href="https://react.dev"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="React logo"
+        class="logo react"
+        src="mock-svg"
+      />
+    </a>
+  </div>
+  <h1>
+    Vite + React
+  </h1>
+  <div
+    class="card"
+  >
+    <button>
+      count is 
+      0
+    </button>
+    <p>
+      Edit 
+      <code>
+        src/App.tsx
+      </code>
+       and save to test HMR
+    </p>
+  </div>
+  <p
+    class="read-the-docs"
+  >
+    Click on the Vite and React logos to learn more
+  </p>
+</div>
+`;
