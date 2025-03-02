@@ -9,12 +9,12 @@
 /** @import Hooks */
 import { useState } from "react";
 
+/** @import Utilities */
+import { ReactElement } from "react";
+
 /** @import Assets */
 import reactLogo from "./../../assets/images/react.svg";
 import viteLogo from "./../../assets/images/vite.svg";
-
-/** @import Utilities */
-import { ReactElement } from "react";
 
 /** @import Stylesheets */
 import "./app.css";

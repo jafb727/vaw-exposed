@@ -1,18 +1,23 @@
 /**
  * @author Jose A Felix
- * @name main
+ * @name index
  * @description Application entry file
  */
 
 /** -------------------------------------------------------- */
 
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css";
+/** @import Components */
 import App from "./pages/app";
 
-createRoot(document.getElementById("root")!).render(
-   <StrictMode>
-      <App />
-   </StrictMode>
-);
+/** @import Utilities */
+import { createRoot } from "react-dom/client";
+
+/** @import Stylesheets */
+import "./index.css";
+
+/** -------------------------------------------------------- */
+
+/** Mounting React App into unique HTMLElement */
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const appContainer = document.getElementById("root")!;
+createRoot(appContainer).render(<App />);
