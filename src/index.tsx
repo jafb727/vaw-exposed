@@ -9,7 +9,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./pages/app/App.tsx";
+import App from "./pages/app/app.tsx";
 
 createRoot(document.getElementById("root")!).render(
    <StrictMode>
