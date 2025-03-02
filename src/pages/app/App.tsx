@@ -12,6 +12,9 @@ import { useState } from "react";
 /** @import Utilities */
 import { JSX } from "react";
 
+/** @import Types */
+import { containerProps } from "../../types";
+
 /** @import Assets */
 import reactLogo from "../../assets/images/react.svg";
 import viteLogo from "../../assets/images/vite.svg";
@@ -45,7 +48,8 @@ const App = (): JSX.Element => {
 
    /** ------------------------------ */
 
-   const properties = {
+   /** Main component wrapper properties */
+   const properties: containerProps = {
       "data-testid": "app-page",
    };
 
