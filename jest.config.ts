@@ -38,6 +38,7 @@ const config: Config = {
       ".(gif|ttf|eot|svg|png)$": "<rootDir>/src/test/__mocks__/fileMock.js",
    },
    setupFilesAfterEnv: ["<rootDir>/src/test/setupTests.tsx"],
+   preset: "ts-jest",
    testEnvironment: "node",
    testMatch: ["**/__tests__/**/*.(test|spec).(js|jsx|ts|tsx)"],
    testPathIgnorePatterns: ["/node_modules/"],
