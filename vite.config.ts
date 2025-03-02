@@ -1,7 +1,25 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+/**
+ * @author Jose A Felix
+ * @name vite.config
+ * @description Vite main configuration file
+ */
 
-// https://vite.dev/config/
+/** -------------------------------------------------------- */
+
+/** @import Libraries */
+import react from "@vitejs/plugin-react-swc";
+
+/** @import Utilities */
+import { defineConfig } from "vite";
+
+/** -------------------------------------------------------- */
+
+/**
+ * @function defineConfig
+ * @description Main Vite configuration function
+ * @see https://vite.dev/config/
+ * @returns {object}
+ */
 export default defineConfig({
-  plugins: [react()],
-})
+   plugins: [react()],
+});

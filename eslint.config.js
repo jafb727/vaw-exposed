@@ -1,3 +1,12 @@
+/**
+ * @author Jose A Felix
+ * @name eslint.config
+ * @description ESLint configuration file
+ */
+
+/** -------------------------------------------------------- */
+
+/** @import Libraries */
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -5,6 +14,9 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 import react from "eslint-plugin-react";
 
+/** -------------------------------------------------------- */
+
+/** @description TypeScript + ESLint configuration */
 export default tseslint.config(
    { ignores: ["dist"] },
    {
