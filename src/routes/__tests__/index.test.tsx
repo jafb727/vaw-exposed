@@ -12,7 +12,7 @@ import { RouterProvider } from "react-router-dom";
 
 /** -------------------------------------------------------- */
 
-describe("App", () => {
+describe("Routing", () => {
    it("Mounts router", () => {
       /** Router mounting */
       const app = <RouterProvider router={router} />;
