@@ -1,6 +1,6 @@
 /**
  * @author Jose A Felix
- * @name App
+ * @name app
  * @description Main application component
  */
 

@@ -6,8 +6,9 @@
 
 /** -------------------------------------------------------- */
 
-/** @import Components */
-import App from "./pages/app";
+/** @import Routing */
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes";
 
 /** @import Utilities */
 import { createRoot } from "react-dom/client";
@@ -21,4 +22,6 @@ import "./index.css";
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const appContainer = document.getElementById("root")!;
 const root = createRoot(appContainer);
-root.render(<App />);
+
+/** Rendering App with providers */
+root.render(<RouterProvider router={router} />);
