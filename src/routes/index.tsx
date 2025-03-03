@@ -7,11 +7,10 @@
 /** -------------------------------------------------------- */
 
 /** @import Components */
-import { createBrowserRouter } from "react-router-dom";
 import App from "../pages/app";
 
 /** @import Utilities */
-import { createRoot } from "react-dom/client";
+import { createBrowserRouter } from "react-router-dom";
 
 /** -------------------------------------------------------- */
 
@@ -19,10 +18,18 @@ import { createRoot } from "react-dom/client";
  * @name router
  * @description React router configuration
  */
-export const router = createBrowserRouter([
-   {
-      path: "/",
-      element: <App />,
-      children: [],
-   },
-]);
+export const router: ReturnType<typeof createBrowserRouter> =
+   createBrowserRouter(
+      [
+         {
+            path: "/",
+            element: <App />,
+            children: [],
+         },
+      ],
+      {
+         future: {
+            v7_relativeSplatPath: true,
+         },
+      }
+   );
