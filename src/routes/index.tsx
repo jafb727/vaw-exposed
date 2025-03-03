@@ -8,6 +8,7 @@
 
 /** @import Components */
 import App from "../pages/app";
+import Home from "../pages/home";
 
 /** @import Utilities */
 import { createBrowserRouter } from "react-router-dom";
@@ -23,8 +24,12 @@ export const router: ReturnType<typeof createBrowserRouter> =
       [
          {
             path: "/",
-            element: <App />,
-            children: [],
+            children: [
+               {
+                  index: true,
+                  element: <Home />,
+               },
+            ],
          },
       ],
       {
