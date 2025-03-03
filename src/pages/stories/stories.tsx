@@ -1,7 +1,7 @@
 /**
  * @author Jose A Felix
- * @name home
- * @description Home page component
+ * @name stories
+ * @description Stories page component
  */
 
 /** -------------------------------------------------------- */
@@ -15,22 +15,22 @@ import { wrapperProps } from "../../types";
 /** -------------------------------------------------------- */
 
 /**
- * @name Home
+ * @name Stories
  * @description Main application component
  * @returns {JSX.Element}
  */
-const Home = (): JSX.Element => {
+const Stories = (): JSX.Element => {
    /** Main component wrapper properties */
    const properties: wrapperProps = {
-      "data-testid": "home-page",
+      "data-testid": "stories-page",
    };
 
    /** ------------------------------ */
 
-   return <div {...properties}>Home</div>;
+   return <div {...properties}>Stories</div>;
 };
 
 /** -------------------------------------------------------- */
 
 /** @exports @default Component */
-export default Home;
+export default Stories;

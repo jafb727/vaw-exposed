@@ -9,6 +9,7 @@
 /** @import Components */
 import App from "../pages/app";
 import Home from "../pages/home";
+import Stories from "../pages/stories";
 
 /** @import Utilities */
 import { createBrowserRouter } from "react-router-dom";
@@ -28,6 +29,10 @@ export const router: ReturnType<typeof createBrowserRouter> =
                {
                   index: true,
                   element: <Home />,
+               },
+               {
+                  path: "stories",
+                  element: <Stories />,
                },
             ],
          },

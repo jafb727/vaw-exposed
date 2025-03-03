@@ -80,6 +80,7 @@ const App = (): JSX.Element => {
       </div>
    );
 };
+
 /** -------------------------------------------------------- */
 
 /** @exports @default Component */
