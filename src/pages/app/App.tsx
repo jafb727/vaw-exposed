@@ -23,13 +23,24 @@ import viteLogo from "../../assets/images/vite.svg";
 import "./app.css";
 
 /** -------------------------------------------------------- */
+/** Interface and Types */
+
+/**
+ * @type TProps
+ * @description Component custom properties
+ */
+type TProps = {
+   [key: string]: unknown;
+};
+
+/** -------------------------------------------------------- */
 
 /**
  * @name App
  * @description Main application component
  * @returns {JSX.Element}
  */
-const App = (): JSX.Element => {
+const App = (props: React.PropsWithChildren<TProps>): JSX.Element => {
    /** State */
    const [count, setCount] = useState<number>(0);
 

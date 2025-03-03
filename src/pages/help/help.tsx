@@ -13,13 +13,24 @@ import { JSX } from "react";
 import { wrapperProps } from "../../types";
 
 /** -------------------------------------------------------- */
+/** Interface and Types */
+
+/**
+ * @type TProps
+ * @description Component custom properties
+ */
+type TProps = {
+   [key: string]: unknown;
+};
+
+/** -------------------------------------------------------- */
 
 /**
  * @name Help
  * @description Main application component
  * @returns {JSX.Element}
  */
-const Help = (): JSX.Element => {
+const Help = (props: React.PropsWithChildren<TProps>): JSX.Element => {
    /** Main component wrapper properties */
    const properties: wrapperProps = {
       "data-testid": "help-page",

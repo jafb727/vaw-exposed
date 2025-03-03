@@ -12,6 +12,7 @@ import Home from "../pages/home";
 import Stories from "../pages/stories";
 import Violence from "../pages/violence";
 import Legal from "../pages/legal";
+import Help from "../pages/help";
 
 /** @import Utilities */
 import { createBrowserRouter } from "react-router-dom";
@@ -43,6 +44,10 @@ export const router: ReturnType<typeof createBrowserRouter> =
                {
                   path: "legal",
                   element: <Legal />,
+               },
+               {
+                  path: "legal",
+                  element: <Help />,
                },
             ],
          },

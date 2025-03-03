@@ -24,4 +24,6 @@ const appContainer = document.getElementById("root")!;
 const root = createRoot(appContainer);
 
 /** Rendering App with providers */
-root.render(<RouterProvider router={router} />);
+root.render(
+   <RouterProvider router={router} future={{ v7_startTransition: true }} />
+);
