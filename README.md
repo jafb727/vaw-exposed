@@ -58,7 +58,6 @@ The app will be available at `http://localhost:3000/`
 ├── src/
 │   ├── assets/          # Static assets (images, icons, etc.)
 │   ├── components/      # Reusable UI components
-│   ├── contexts/        # React context providers
 │   ├── hooks/           # Custom hooks
 │   ├── i18n/            # Internationalization files
 │   ├── pages/           # Page components (routed views)
@@ -66,13 +65,24 @@ The app will be available at `http://localhost:3000/`
 │   ├── services/        # API calls and external services
 │   ├── store/           # State management (Zustand/React Query)
 │   ├── styles/          # Global styles and Tailwind CSS configuration
+│   ├── test/            # Testing environment utilities
+│   ├── types/           # Global application types
 │   ├── utils/           # Utility functions
-│   ├── App.tsx          # Main app component
-│   ├── main.tsx         # App entry point
+│   ├── index.tsx        # App entry point
 ├── public/              # Public static files
+├── coverage/            # Jest coverage configuration
 ├── .storybook/          # Storybook configuration
 ├── tests/               # Integration and end-to-end tests
-├── scripts/             # Custom automation scripts
+├── .gitignore           # Git ignore configuration
+├── eslint.config.js      # ESLint configuration
+├── index.html           # App entry html
+├── jest.config.js        # Jest configuration
+├── LICENSE              # License
+├── package.json         # Node app configuration
+├── README.md            # Readme
+├── tsconfig.app.json     # Typescript application configuration
+├── tsconfig.json         # Typescript configuration
+├── tsconfig.node.json    # Typescript node configuration
 └── vite.config.ts        # Vite configuration
 ```
 
@@ -112,18 +122,15 @@ CMD ["pnpm", "preview"]
 Routing is handled using `react-router-dom`. Routes are defined dynamically inside `src/routes/index.tsx`.
 
 ```tsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import AboutPage from "../pages/AboutPage";
+import { createBrowserRouter } from "react-router-dom";
+import Home from "../pages/Home";
 
-const AppRoutes = () => (
-   <BrowserRouter>
-      <Routes>
-         <Route path="/" element={<HomePage />} />
-         <Route path="/about" element={<AboutPage />} />
-      </Routes>
-   </BrowserRouter>
-);
+const router = createBrowserRouter([
+   {
+      path: "/",
+      element: <Home />,
+   },
+]);
 
 export default AppRoutes;
 ```
